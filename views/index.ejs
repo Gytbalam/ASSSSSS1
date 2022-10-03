@@ -1,27 +1,12 @@
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset = "UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-<!-- CSS -->
-<link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css' />
-<link rel='stylesheet' href='/@fortawesome/fontawesome-free/css/all.min.css' />    
-<link rel='stylesheet' href='/Content/app.css' />
+<!-- header -->
+<%- include ('partials/header.ejs') %> 
+ 
+<!-- body -->
+<%- include ('partials/main_nav.ejs') %> 
 
-  </head>
-  <body>
-   <!--  <h1>Welcome to the <%= title %> web page</h1>
-    <p>Hello world 2</p> -->
-
-    <!-- SCRIPT -->
-    <script src="/jquery/dist/jquery.min.js"></script>
-    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <script src="/Scripts/app.js"></script>
-  </body>
-</html>
+<!--  footer -->
+<%- include ('partials/footer.ejs') %> 
 
 
 
@@ -30,16 +15,3 @@
 
 
 
-<!DOCTYPE html>
-<html>
-  <head>
-    
-    
-  </head>
-  <body>
-    <h1>Welcome to the <%= title %> web page</h1>
-    <p>Hello world 2</p>
-
-    <script src="/Scripts/app.js"></script>
-  </body>
-</html>

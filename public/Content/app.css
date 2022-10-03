@@ -1,1 +1,15 @@
 /* css */
+
+.rectangulo{
+    width: 75px; 
+    height: 75px; 
+    background-image: linear-gradient(to right, rgba(194, 235, 152, 0), rgb(0, 195, 255));
+
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+    left: 20%;
+    font-size: 30px;
+}
