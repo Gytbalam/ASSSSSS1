@@ -1,14 +1,16 @@
-const http = require('http');
-
-const hostname = '127.0.0.1';
+const express = require('express');
+const app = express();
 const port = 4000;
 
-const server = http.createServer((req,res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-type', 'text/plain');
-    res.end('Hello wolrs');
-});
 
-server.listen(port, hostname, () => {
+//display
+
+app.get('',(req,res) => {
+    res.send('Hello world')
+})
+
+//after accepting the request
+
+app.listen(4000, ()=>{
     console.log('App listening on port 4000')
-});
+    })
