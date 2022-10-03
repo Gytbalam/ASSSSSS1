@@ -1,23 +1,16 @@
 {
   "name": "assssss1",
-  "version": "1.0.0",
-  "description": "assignment1",
-  "main": "server.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node ./server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Gytbalam/ASSSSSS1.git"
-  },
-  "author": "YXB",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Gytbalam/ASSSSSS1/issues"
-  },
-  "homepage": "https://github.com/Gytbalam/ASSSSSS1#readme",
   "dependencies": {
-    "express": "^4.18.1"
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.8",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
   }
 }
