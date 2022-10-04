@@ -1,4 +1,8 @@
 /* css */
+  /*  Student: Yoaltzin Xolalpa
+   ID: 301184971
+   DATE: 05.10.22
+   Assignment 1  */
 body{
     background-color: #212529;
     /* opacity: 0.8; */
@@ -27,7 +31,7 @@ body{
 .wrapper_home{
     width: 890px;
     margin: 0 auto;
-    background-color: #dce6f1
+    background-color: #c9b4ed
 }
 .circle{
     float: left;
