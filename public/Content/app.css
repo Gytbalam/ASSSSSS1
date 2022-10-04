@@ -29,8 +29,13 @@ body{
     margin: 0 auto;
     background-color: #dce6f1
 }
-
-
+.circle{
+    float: left;
+        width: 430px;
+        height: 300px;
+       border-radius:  10px 100px / 120px;
+    
+}
 /* .wrapper_foot{
      background-color: rgb(255, 153, 102);
         color: rgb(0, 0, 0);
