@@ -3,6 +3,9 @@
    ID: 301184971
    DATE: 05.10.22
    Assignment 1  */
+/* The css taken for the background was taken from the website: https://www.magicpattern.design/tools/css-backgrounds .
+the pictures were taken from fontawesome, personal images and https://unsplash.com/es/fotos/D3yfiuKCP_I */
+
 body{
     background-color: #212529;
     /* opacity: 0.8; */
@@ -39,6 +42,11 @@ body{
         height: 300px;
        
     
+}
+
+.images1{
+
+
 }
 /* .wrapper_foot{
      background-color: rgb(255, 153, 102);
