@@ -1,4 +1,14 @@
 /* css */
+body{
+    background-color: #212529;
+    /* opacity: 0.8; */
+    background: radial-gradient(circle, transparent 20%, #212529 20%, #212529 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #212529 20%, #212529 80%, transparent 80%, transparent) 25px 25px, linear-gradient(#723365 2px, transparent 2px) 0 -1px, linear-gradient(90deg, #723365 2px, #212529 2px) -1px 0;
+    background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
+    font-size: 14px;
+    width: 890px;
+    margin: 0 auto;
+    
+}
 
 .rectangulo{
     width: 75px; 
@@ -13,3 +23,17 @@
     left: 20%;
     font-size: 30px;
 }
+
+.wrapper_home{
+    width: 890px;
+    margin: 0 auto;
+    background-color: #dce6f1
+}
+
+/* .wrapper_foot{
+     background-color: rgb(255, 153, 102);
+        color: rgb(0, 0, 0);
+        bottom:700px;
+        position: absolute;
+        
+} */
