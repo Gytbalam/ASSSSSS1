@@ -6,7 +6,7 @@ by Greg Lim was consoulted. */
  * Module dependencies.
  */
 
-var app = require('./app');
+var app = require('./config/app');
 var debug = require('debug')('assssss1:server');
 var http = require('http');
 
