@@ -23,12 +23,13 @@ body{
     background-image: linear-gradient(to right, rgba(194, 235, 152, 0), rgb(0, 195, 255));
 
     position: relative;
-    display: flex;
-    text-align: center;
-    justify-content: center;
+    display: block; /*flex */
+    text-align: right;
+    justify-content: right;
     
     left: 20%;
     font-size: 30px;
+    color: white
 }
 
 .wrapper_home{
@@ -36,6 +37,20 @@ body{
     margin: 0 auto;
     background-color: #c9b4ed
 }
+
+.wrapper_home2{
+    width: 890px;
+    margin: 0 auto;
+    text-align: center;
+   
+}
+
+.assi{
+
+    left: 100px;
+    top: 150px;
+}
+
 .circle{
     float: left;
         width: 430px;
@@ -44,10 +59,6 @@ body{
     
 }
 
-.images1{
-
-
-}
 /* .wrapper_foot{
      background-color: rgb(255, 153, 102);
         color: rgb(0, 0, 0);
