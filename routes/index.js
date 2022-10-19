@@ -32,4 +32,8 @@ router.get('/contact', function(req, res, next) {
   res.render('contact',{ title: 'Contact'});
 });
 
+/* router.get('/book', function(req, res, next) {
+  res.render('book',{ title: 'Book List'});
+}); */
+
 module.exports = router;

@@ -15,9 +15,11 @@ Book.find((err, BookList) => {
     }
     else
     {
-        console.log(BookList);
+        console.log("################ "+ BookList);
+       //console.log(bookList);
+        res.render('book', {title: 'Book list', BookList: BookList})
     }
-});
+    });
 });
 
 module.exports = router;

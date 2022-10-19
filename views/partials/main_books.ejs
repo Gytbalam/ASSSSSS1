@@ -29,6 +29,7 @@
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/contact"><i class="fa-regular fa-paper-plane"></i>Contact</a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/book"><i class="fa-regular fa-paper-plane"></i>Book</a>
           </li>
@@ -37,31 +38,43 @@
   </nav>
       <!-- MAIN NAVIGATION -->
       <div class="wrapper_home"> 
-      <h1>Welcome to the <%= title %> web page</h1>
-      <br>
-      <br>
-      <h2><i class="fa-brands fa-codepen">&nbsp; &nbsp; </i><%= title %></h2>
-     <br>
-       <h2>Mission Statement</h2>
-      <br>  
-      <p>The mission of this Web page is to share the projects and experience that I have gone trough. 
-        This website was dessigned specifically for Web Application Developement course. 
-        In this website you will be able to navigate from home, to About me, Projects, Contact and Services that are available.
-        If you have any comment or inquiry, you can always write me in the "Contact me" page.</p>
-        
-        <br>
-        <p> Best Regards.</p>
+        <h1>Welcome to the <%= title %> web page</h1>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-              <br>
-      </div>
+        <h2><i class="fa-brands fa-codepen">&nbsp; &nbsp; </i><%= title %></h2>
+       <br>
+         <h2>Books</h2>
+        <br>  
+        <p>BOOK PAGE</p>
+        <main class="container">
+          <div class="row">
+              <div class="col-md-offset-3 col-md-6">
+                  <br>
+                  <table class="table table-bordered table-striped table-hover">
+                  <tr>
+                      <th class="text-center">Name </th>
+                      <th class="text-center">Author </th>
+                      <th class="text-center">Published </th>
+                      <th class="text-center">Description </th>
+                      <th class="text-center">Price </th>
+                  </tr>
+                      <!-- repeatable section -->
+                      <% for(let count = 0; count < BookList.length; count++) { %>
+                        <tr class="table table-bordered table-striped table-hover">
+                            <td class="text-center"><%= BookList[count].name %></td>
+                            <td class="text-center"><%= BookList[count].author %></td>
+                            <td class="text-center"><%= BookList[count].published %></td>
+                            <td class="text-center"><%= BookList[count].description %></td>
+                            <td class="text-center"><%= BookList[count].price %></td>
+                        </tr>
+                    <% } %>
+                </table>
+              </div>
+          </div>
+      </main>
+          
+          
+        </div>
     </body>
     </html>
 
