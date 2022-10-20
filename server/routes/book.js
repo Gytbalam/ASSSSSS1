@@ -5,9 +5,10 @@ let mongoose = require('mongoose');
 // connect to book model
 
 let Book = require('../models/book');
+let bookController = require('../controllers/book');
 
 // get route for the book list page
-router.get('/',(req,res,next) => {
+/* router.get('/',(req,res,next) => {
 Book.find((err, BookList) => {
     if(err)
     {
@@ -20,17 +21,21 @@ Book.find((err, BookList) => {
         res.render('book/list', {title: 'Books', BookList: BookList})
     }
     });
-});
+}); */
+
+router.get('/', bookController.displayBookList);
 
 
 // GET route for display the add list page - create operation 
 
-router.get('/add',(req,res,next) => {
+/* router.get('/add',(req,res,next) => {
     res.render('book/add', {title: 'Add Books'})
-});
+}); */
+
+router.get('/add', bookController.displayAddPage);
 
 // POST route for processing the add list page - create operation 
-router.post('/add',(req,res,next) => {
+/* router.post('/add',(req,res,next) => {
     let newBook = Book({
         "name": req.body.name,
         "author": req.body.author,
@@ -52,11 +57,13 @@ router.post('/add',(req,res,next) => {
         }
     });
 
-});
+}); */
+
+router.post('/add', bookController.processAddPage);
 
 // EDIT route for display the edit list page - create operation 
 
-router.get('/edit/:id',(req,res,next) => {
+/* router.get('/edit/:id',(req,res,next) => {
     let id = req.params.id;
 
     Book.findById(id,(err, bookToEdit) => {
@@ -72,10 +79,13 @@ router.get('/edit/:id',(req,res,next) => {
         }
     });
 });
+ */
+
+router.get('/edit/:id', bookController.displayEditPage);
 
 // POST route for display the edit list page - update operation 
 
-router.post('/edit/:id',(req,res,next) => {
+/* router.post('/edit/:id',(req,res,next) => {
     let id = req.params.id
 
     let updatedBook = Book({
@@ -101,10 +111,13 @@ Book.updateOne({ _id: id}, updatedBook, (err) => {
 });
 
 });
+ */
+
+router.post('/edit/:id', bookController.processEditPage);
 
 // GET route to perform a book deletion- DELETE op
 
-router.get('/delete/:id',(req,res,next) => {
+/* router.get('/delete/:id',(req,res,next) => {
     let id =  req.params.id;
 
     Book.remove({ _id: id}, (err) => {
@@ -119,7 +132,9 @@ router.get('/delete/:id',(req,res,next) => {
         res.redirect('/book-list');
         }
     });
-});
+}); */
+
+router.get('/delete/:id', bookController.performDelete);
 
 module.exports = router;
 
