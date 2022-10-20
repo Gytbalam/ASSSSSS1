@@ -26,7 +26,7 @@ Book.find((err, BookList) => {
 // GET route for display the add list page - create operation 
 
 router.get('/add',(req,res,next) => {
-    res.render('book/add', {title: 'Add Books', BookList: BookList})
+    res.render('book/add', {title: 'Add Books'})
 });
 
 // POST route for processing the add list page - create operation 
@@ -47,6 +47,7 @@ router.post('/add',(req,res,next) => {
         }
         else
         {
+            //refresh the book list
             res.redirect('/book-list');
         }
     });
@@ -67,7 +68,7 @@ router.get('/edit/:id',(req,res,next) => {
         else
         {
             //show edit view
-            res.render('book/edit', { title:'Edit Book',bookToEdit})
+            res.render('book/edit', { title:'Edit Book',book: bookToEdit})
         }
     });
 });
@@ -78,7 +79,7 @@ router.post('/edit/:id',(req,res,next) => {
     let id = req.params.id
 
     let updatedBook = Book({
-        "id": id,
+        "_id": id,
         "name": req.body.name,
         "author": req.body.author,
         "published": req.body.published,
