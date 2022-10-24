@@ -16,15 +16,19 @@ module.exports.displayBookList = (req,res,next) => {
         {
             console.log("################ "+ BookList);
            //console.log(bookList);
-            res.render('book/list', {title: 'Books', BookList: BookList})
+            res.render('book/list',
+             {title: 'Contact List', 
+             BookList: BookList,
+            displayName: req.user ? req.user.displayName : ''})
         }
         });
     }
 
     module.exports.displayAddPage = (req,res,next) => {
-        res.render('book/add', {title: 'Add Books'})
-    };
-
+        res.render('book/add', {title: 'Add Add Contacts',
+        displayName: req.user ? req.user.displayName : ''})
+    }
+        
 
     module.exports.processAddPage = (req,res,next) => {
         let newBook = Book({
@@ -61,7 +65,8 @@ module.exports.displayBookList = (req,res,next) => {
             else
             {
                 //show edit view
-                res.render('book/edit', { title:'Edit Book',book: bookToEdit})
+                res.render('book/edit', { title:'Edit Contact List',book: bookToEdit,
+                displayName: req.user ? req.user.displayName : ''})
             }
         });
     }

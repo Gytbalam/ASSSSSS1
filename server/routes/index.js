@@ -9,6 +9,7 @@ by Greg Lim was consoulted. */
 
 let express = require('express');
 let router = express.Router();
+
 //index of controllers
 
 let indexController = require('../controllers/index');
@@ -16,10 +17,6 @@ let indexController = require('../controllers/index');
 
 
 /* GET home page. */
-/* BEFORE: router.get('/', function(req, res, next) {
-  res.render('index',
-   { title: 'Home' });
-}); */
 
 router.get('/', indexController.displayHomePage);
 
@@ -50,5 +47,19 @@ router.get('/contact', indexController.displayContactPage);
 }); */
 
 
+//GET ROUTE FOR displaying the login page
+router.get('/login', indexController.displayLoginPage);
+
+//GET ROUTE FOR processing the login page
+router.post('/login', indexController.processLoginPage);
+
+//GET ROUTE FOR displaying the register page
+router.get('/register', indexController.displayRegisterPage);
+
+//GET ROUTE FOR processing the register page
+router.post('/register', indexController.processRegisterPage);
+
+//logout
+router.get('/logout', indexController.performLogout);
 
 module.exports = router;

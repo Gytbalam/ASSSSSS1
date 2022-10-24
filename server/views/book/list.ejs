@@ -10,38 +10,46 @@
       <!-- MAIN NAVIGATION -->
       <div class="wrapper_home"> 
         <h1>Welcome to the <%= title %> web page</h1>
+
+        <% if(typeof displayName == 'string' && displayName) { %>
+
         <a href="/book-list/add" class="btn btn-primary" role="button">
-          <i class="fas fa-plus-circle"></i> Add a Book</a>
+          <i class="fas fa-plus-circle"></i> Add Contact</a>
+          <% } %>
         <br>
         <br>
         <h2><i class="fa-brands fa-codepen">&nbsp; &nbsp; </i><%= title %></h2>
        <br>
-         <h2>Books</h2>
+         <h2>Business Contacts List View</h2>
         <br>  
-        <p>BOOK PAGE</p>
+        <p>In this page you can add some Business Contacts, feel free to add, modify or delete the registers.</p>
         <main class="container">
           <div class="row">
               <div class="col-md-offset-3 col-md-6">
                   <br>
                   <table class="table table-bordered table-striped table-hover">
                   <tr>
-                      <th class="text-center">Name </th>
-                      <th class="text-center">Author </th>
-                      <th class="text-center">Published </th>
-                      <th class="text-center">Description </th>
-                      <th class="text-center">Price </th>
+                      <th class="text-center">Contact Name </th>
+                       <th class="text-center">Contact Family Name </th> 
+                      <th class="text-center">Contact Number </th>
+                      <th class="text-center">Email Address </th>
+                     <!--  <th class="text-center">Price </th> -->
+                      <% if(typeof displayName == 'string' && displayName) { %>
                       <th class="text-center"></th>
                       <th class="text-center"></th>
+                      <% } %>
                   </tr>
                       <!-- repeatable section -->
                       <% for(let count = 0; count < BookList.length; count++) { %>
                         <tr class="table table-bordered table-striped table-hover">
                             <td class="text-center"><%= BookList[count].name %></td>
-                            <td class="text-center"><%= BookList[count].author %></td>
+                           <td class="text-center"><%= BookList[count].author %></td> 
                             <td class="text-center"><%= BookList[count].published %></td>
                             <td class="text-center"><%= BookList[count].description %></td>
-                            <td class="text-center"><%= BookList[count].price %></td>
-                            <td class="text-center">
+                            <!-- <td class="text-center"><%= BookList[count].price %></td> -->
+                            <% if(typeof displayName == 'string' && displayName) { %>
+                            <br>
+                              <td class="text-center">
                               <a href="/book-list/edit/<%= BookList[count]._id %>" class="btn btn-primary btn-sm">
                               <i class="fas fa-pencil alt"></i>Edit</a>
                             </td>
@@ -49,7 +57,9 @@
                             <a href="/book-list/delete/<%= BookList[count]._id %>" class="btn btn-danger btn-sm">
                             <i class="fas fa-trash alt"></i>Delete</a>
                           </td>
+                          
                           </tr>
+                          <% } %>
                     <% } %>
                 </table>
               </div>
