@@ -12,7 +12,8 @@ let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
 //mongoose authentication
-let session = require('express-session');
+//let session = require('express-session');
+let session = require('cookie-session');
 let passport = require('passport');
 
 let passportlocal = require('passport-local');
