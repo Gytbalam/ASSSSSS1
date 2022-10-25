@@ -45,6 +45,12 @@ body{
    
 }
 
+.wrapper_home3{
+    width: 890px;
+    margin: 0 auto;
+    background-image: linear-gradient(to right, rgba(170, 250, 241, 0.61), rgba(21, 179, 227, 0.829))
+   
+}
 .assi{
 
     left: 100px;

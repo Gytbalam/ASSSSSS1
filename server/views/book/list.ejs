@@ -8,7 +8,7 @@
 <body>
    
       <!-- MAIN NAVIGATION -->
-      <div class="wrapper_home"> 
+      <div class="wrapper_home3"> 
         <h1>Welcome to the <%= title %> web page</h1>
 
         <% if(typeof displayName == 'string' && displayName) { %>
@@ -26,7 +26,7 @@
         <main class="container">
           <div class="row">
               <div class="col-md-offset-3 col-md-6">
-                  <br>
+                  
                   <table class="table table-bordered table-striped table-hover">
                   <tr>
                       <th class="text-center">Contact Name </th>
@@ -57,17 +57,19 @@
                             <a href="/book-list/delete/<%= BookList[count]._id %>" class="btn btn-danger btn-sm">
                             <i class="fas fa-trash alt"></i>Delete</a>
                           </td>
-                          
                           </tr>
                           <% } %>
                     <% } %>
                 </table>
               </div>
           </div>
+          <br>
+          <br>
       </main>
           
           
         </div>
+
       </body>
       </html>
 
