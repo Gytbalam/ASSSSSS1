@@ -1,3 +1,8 @@
+/* Student: Yoaltzin Xolalpa
+ID: 301184971
+DATE: 26.10.22
+Assignment 2  */
+
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');

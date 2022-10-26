@@ -1,3 +1,8 @@
+/* Student: Yoaltzin Xolalpa
+ID: 301184971
+DATE: 26.10.22
+Assignment 2  */
+
 // require modules for the User Model
 let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');

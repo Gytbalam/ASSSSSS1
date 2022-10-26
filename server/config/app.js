@@ -1,7 +1,7 @@
 /* Student: Yoaltzin Xolalpa
 ID: 301184971
-DATE: 05.10.22
-Assignment 1  */
+DATE: 26.10.22
+Assignment 2  */
 
 //installed 3rd party packages
 
@@ -60,13 +60,6 @@ app.use(express.static(path.join(__dirname, '../../node_modules')));
 //images
 app.use(express.static(path.join(__dirname, '../public')));
 
-//try
-/* app.use(session({
-  secret: 'SomeSecret',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: true }
-})); */
 
 //setup express session
 app.use(session({
