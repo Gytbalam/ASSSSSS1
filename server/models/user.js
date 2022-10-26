@@ -1,57 +1,60 @@
-// require modules 
+// require modules for the User Model
 let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');
 
-let user = mongoose.Schema(
+let User = mongoose.Schema
+(
     {
-        username:
+        username: 
         {
             type: String,
-            default:'',
+            default: '',
             trim: true,
-            required: "user name is required"
+            required: 'username is required'
         },
-            /*password:
+        /*
+        password: 
+        {
             type: String,
-                        default:"",
-                        trim: true,
-                        required: "user name is required"
-            */
-            email:
-            {
-                type: String,
-            default:'',
+            default: '';
             trim: true,
-            required: "user name is required"
-            },
-            displayName:
-            {
-                type: String,
-            default:'',
+            required: 'password is required'
+        }
+        */
+       email: 
+       {
+            type: String,
+            default: '',
             trim: true,
-            required: "user name is required"
-            },
-            created:
-            {
-                type: Date,
-                default:Date.now,
-            },
-            updated:
-            {
-                type: Date,
-                default:Date.now,
-            },
+            required: 'email address is required'
+       },
+       displayName: 
+       {
+            type: String,
+            default: '',
+            trim: true,
+            required: 'Display Name is required'
+       },
+       created: 
+       {
+            type: Date,
+            default: Date.now
+       },
+       update: 
+       {
+            type: Date,
+            default: Date.now
+       }
     },
     {
         collection: "users"
     }
 );
 
-//config for user model
+// configure options for User Model
 
-let options = ({missingPasswordError: 'wrong// Missing Password'});
+let options = ({ missingPasswordError: 'Wrong / Missing Password'});
 
-user.plugin(passportLocalMongoose, options);
+User.plugin(passportLocalMongoose, options);
 
-module.exports.User = mongoose.model('User', user);
-
+module.exports.User = mongoose.model('User', User);
